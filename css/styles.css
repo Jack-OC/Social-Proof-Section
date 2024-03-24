@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+    --primary-font: League Spartan, sans-serif;
+  
+    --fw-bold: 700;
+    --fw-semibold: 500;
+    --fw-regular: 400;
+
+    --fs-800: 3rem;
+    --fs-700: 2rem;
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
+  
+    --primary-colour:  hsl(300, 43%, 22%);
+    --secondary-colour: hsl(333, 80%, 67%);
+    
+    --neutral-colour-1: hsl(303, 10%, 53%);
+    --neutral-colour-2:  hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+
+  ul[class], ol[class] {
+    list-style: none;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    line-height: 1.5;
+    font-size: 0.9375rem;
+  }
+
+  .flow-content > * + * {
+    margin-top: 1rem;
+  }
+  
+  body {
+    font-family: var(--primary-font);
+    font-weight: var(--fw-regular);
+    color: var(--neutral-colour-1);
+    background-color: var(--white);
+    text-align: center;
+    background: url("../images/bg-pattern-top-mobile.svg") no-repeat top,
+				        url("../images/bg-pattern-bottom-mobile.svg") no-repeat bottom;
+  }
+  
+  main {
+    padding: 0 2rem;
+    margin: 4rem auto auto 0;
+  }
+
+  .info-title {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    max-width: 12ch;
+    margin: 0 auto 1rem auto;
+    color: var(--primary-colour);
+  }
+
+  .info-lead {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-semibold);
+  }
+
+  .ratings {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .rating {
+    width: 100%;
+    display: grid;
+    gap: 0.5rem;
+    padding: 0.8rem 0;
+    border-radius: 0.5rem;
+    font-size: var(--fs-500);
+    color: var(--primary-colour);
+    font-weight: var(--fw-bold);
+    background-color: var(--neutral-colour-2);
+  }
+
+  .stars {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+  
+
+  .review-section {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+  }
+
+  .user-quote-card {
+    padding: 2.1rem;
+    border-radius: 0.5rem;
+    font-size: var(--fs-500);
+    color: var(--neutral-colour-2);
+    background-color: var(--primary-colour);
+  }
+  
+  .card-top {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .user-quote-card img {
+    border-radius: 100vw;
+    width: 40px;
+    height: 40px;
+  }
+
+  .user-info {
+    text-align: left;
+  }
+
+  .user-info p {
+    font-weight: var(--fw-semibold);
+  }
+
+  .user-status {
+    color: var(--secondary-colour);
+  }
+
+  .user-quote {
+    text-align: left;
+    line-height: 1.4;
+  }
+
+
+  @media (min-width: 900px) {
+
+    body {
+      display: flex;
+      justify-content: center;
+      background: url("../images/bg-pattern-top-desktop.svg") no-repeat top,
+				        url("../images/bg-pattern-bottom-desktop.svg") no-repeat bottom;
+    }
+
+    main {
+      max-width: 1110px;
+      margin: 5rem 0;
+    }
+
+    .info-ratings {
+      display: grid;
+      grid-template-columns: .7fr 1fr;
+      margin-bottom: 2.5rem;
+    }
+
+    .info {
+      text-align: left;
+    }
+  
+    .info-title {
+      font-size: var(--fs-800);
+      margin: 0;
+      text-align: left;
+    }
+
+    .info-lead {
+      width: 90%;
+      margin-top: 1.2rem;
+    }
+
+    .rating {
+      max-width: 400px;
+      display: grid;
+      grid-template-columns: .7fr 1fr;
+    }
+
+    .rating:nth-of-type(1) {
+      margin-left: 5rem;
+    }
+
+    .rating:nth-of-type(2) {
+      margin-left: 9rem;
+    }
+
+    .rating:nth-of-type(3) {
+      margin-left: 13rem;
+    }
+
+    .rating p {
+      text-align: left;
+    }
+
+    .review-section {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .review-section { 
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .user-quote-card {
+      width: 400px;
+      height: fit-content;  
+    }
+
+    .user-quote-card:nth-of-type(2) {
+      position: relative;
+      top: 1rem;
+    }
+
+    .user-quote-card:nth-of-type(3) {
+      position: relative;
+      top: 2rem;
+    }
+
+  }
